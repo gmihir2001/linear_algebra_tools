@@ -51,14 +51,14 @@ int main(void) {
 			int r1;
 			int r2;
 			scanf("%d %d", &r1, &r2);
-			matrix_row_swap(mat_01_ptr, r1, r2);
+			matrix_row_swap(mat_01_ptr, r1 - 1, r2 - 1);
 			matrix_print(mat_01_ptr);
 
 		} else if ( strcmp(command, "m") == 0) {
 			int r;
 			int scalar;
 			scanf("%d %d", &r, &scalar);
-			matrix_row_mult(mat_01_ptr, r, scalar);
+			matrix_row_mult(mat_01_ptr, r - 1, scalar);
 			matrix_print(mat_01_ptr);
 
 		} else if ( strcmp(command, "a") == 0) {
@@ -67,7 +67,7 @@ int main(void) {
 			int r2;
 			int scalar;
 			scanf("%d %d %d", &r1, &r2, & scalar);
-			matrix_row_add_multiple(mat_01_ptr, r1, r2, scalar);
+			matrix_row_add_multiple(mat_01_ptr, r1 - 1, r2 - 1, scalar);
 			matrix_print(mat_01_ptr);
 
 
