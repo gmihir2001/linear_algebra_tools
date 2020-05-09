@@ -11,6 +11,9 @@ struct matrix {
 
 void matrix_init(struct matrix *mat, int rows, int cols, int *input);
 
+// multiply each element in the given row by the scalar.
+// (Basic row operation)
+void matrix_row_mult(struct matrix *mat, int row, int scalar);
 
 void matrix_print(struct matrix *mat);
 
