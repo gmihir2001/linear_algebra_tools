@@ -24,3 +24,12 @@ void matrix_init(struct matrix *mat, int rows, int cols, int *input) {
 	}
 }
 
+void matrix_print(struct matrix *mat) {
+	for(int i = 0; i < mat->rows; i++) {
+		for(int j = 0; j < mat->cols; j++) {
+			printf("%d ", mat->arr[i][j]);
+		}
+
+		printf("\n");
+	}
+}

@@ -19,5 +19,8 @@ int main(void) {
 	};
 
 	matrix_init(mat_01_ptr, 3, 4, input_2d_arr);
+
+	matrix_print(mat_01_ptr);
+
 	return 0;
 }
