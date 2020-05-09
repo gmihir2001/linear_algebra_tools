@@ -17,5 +17,6 @@ void matrix_row_mult(struct matrix *mat, int row, int scalar);
 
 void matrix_print(struct matrix *mat);
 
+void matrix_row_swap(struct matrix *mat, int row_a, int row_b);
 
 #endif

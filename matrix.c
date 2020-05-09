@@ -24,6 +24,15 @@ void matrix_init(struct matrix *mat, int rows, int cols, int *input) {
 	}
 }
 
+void matrix_row_swap(struct matrix *mat, int row_a, int row_b) {
+	int temp = 0;
+	for(int i = 0; i<mat->cols; i++) {
+		temp = mat->arr[row_a][i];
+		mat->arr[row_a][i] = mat->arr[row_b][i];
+		mat->arr[row_b][i] = temp;
+	}
+}
+
 void matrix_row_mult(struct matrix *mat, int row, int scalar) {
 
 	for(int i = 0; i<mat->cols; i++) {
