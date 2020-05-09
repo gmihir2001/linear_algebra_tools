@@ -15,6 +15,8 @@ void matrix_init(struct matrix *mat, int rows, int cols, int *input);
 // (Basic row operation)
 void matrix_row_mult(struct matrix *mat, int row, int scalar);
 
+void matrix_row_divide(struct matrix *mat, int row, int scalar);
+
 void matrix_print(struct matrix *mat);
 
 void matrix_row_swap(struct matrix *mat, int row_a, int row_b);

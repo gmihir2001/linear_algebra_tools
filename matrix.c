@@ -45,6 +45,16 @@ void matrix_row_mult(struct matrix *mat, int row, int scalar) {
 	}
 }
 
+
+void matrix_row_divide(struct matrix *mat, int row, int scalar) {
+
+	for(int i = 0; i<mat->cols; i++) {
+		mat->arr[row][i] /= scalar;
+	}
+
+}
+
+
 void matrix_print(struct matrix *mat) {
 	for(int i = 0; i < mat->rows; i++) {
 		for(int j = 0; j < mat->cols; j++) {

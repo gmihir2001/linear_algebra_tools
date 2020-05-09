@@ -36,6 +36,7 @@ int main(void) {
 	printf("Matrix manipulation options:\n");
 	printf("\t(s)wap rows: ...............  s [r1] [r2]\n");
 	printf("\t(m)ult row by scalar: ......  m [r] [scalar]\n");
+	printf("\t(d)ivide row by scalar: ....  d [r] [scalar]\n");
 	printf("\t(a)dd mult of other row: ...  a [dest] [source] [scalar]\n");
 
 	printf("\n");
@@ -60,6 +61,13 @@ int main(void) {
 			scanf("%d %d", &r, &scalar);
 			matrix_row_mult(mat_01_ptr, r - 1, scalar);
 			matrix_print(mat_01_ptr);
+		} else if ( strcmp(command, "d") == 0) {
+			int r;
+			int scalar;
+			scanf("%d %d", &r, &scalar);
+			matrix_row_divide(mat_01_ptr, r - 1, scalar);
+			matrix_print(mat_01_ptr);
+
 
 		} else if ( strcmp(command, "a") == 0) {
 
