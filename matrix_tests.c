@@ -20,6 +20,10 @@ int main(void) {
 
 	matrix_init(mat_01_ptr, 3, 4, input_2d_arr);
 
+	matrix_row_add_multiple(mat_01_ptr, 1, 0, 2);
+
+	matrix_print(mat_01_ptr);
+
 	matrix_row_swap(mat_01_ptr, 0, 1);
 
 	matrix_row_mult(mat_01_ptr, 2, 5);
