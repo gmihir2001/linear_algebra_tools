@@ -35,7 +35,7 @@ void matrix_row_swap(struct matrix *mat, int row_a, int row_b) {
 void matrix_row_add_multiple(struct matrix *mat, int row_a, int row_z, int scalar) {
 
 	for (int i = 0; i < mat->cols; i++) {
-		mat->arr[row_a][i] += mat->arr[row_z][i] *= scalar;
+		mat->arr[row_a][i] += mat->arr[row_z][i] * scalar;
 	}
 }
 void matrix_row_mult(struct matrix *mat, int row, int scalar) {
