@@ -53,3 +53,7 @@ dkms.conf
 
 # vim swap files
 *.swp
+
+# our generated files:
+matrix_tool
+matrix_tests
