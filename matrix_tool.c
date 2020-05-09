@@ -55,9 +55,22 @@ int main(void) {
 			matrix_print(mat_01_ptr);
 
 		} else if ( strcmp(command, "m") == 0) {
-			printf("Operation not yet supported\n");
+			int r;
+			int scalar;
+			scanf("%d %d", &r, &scalar);
+			matrix_row_mult(mat_01_ptr, r, scalar);
+			matrix_print(mat_01_ptr);
+
 		} else if ( strcmp(command, "a") == 0) {
-			printf("Operation not yet supported\n");
+
+			int r1;
+			int r2;
+			int scalar;
+			scanf("%d %d %d", &r1, &r2, & scalar);
+			matrix_row_add_multiple(mat_01_ptr, r1, r2, scalar);
+			matrix_print(mat_01_ptr);
+
+
 		} else if ( strcmp(command, "q") == 0) {
 			printf("Goodbye!\n");
 		} else {
