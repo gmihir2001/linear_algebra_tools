@@ -57,3 +57,4 @@ dkms.conf
 # our generated files:
 matrix_tool
 matrix_tests
+rational_tests
