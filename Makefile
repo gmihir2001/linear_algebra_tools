@@ -1,10 +1,10 @@
 CC = gcc
 CFLAGS = -Wall -Werror -std=c99
 
-all: rational_tests
+all: matrix_tool
 
 matrix_tool: matrix.c matrix_tool.c
-	$(CC) $(CFLAGS) matrix.c matrix_tool.c -o matrix_tool
+	$(CC) $(CFLAGS) rational.c matrix.c matrix_tool.c -o matrix_tool
 	./matrix_tool
 
 matrix_tests: matrix.c matrix_tests.c

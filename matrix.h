@@ -1,15 +1,17 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
+#include "rational.h"
+
 struct matrix {
 
 	unsigned int rows;
 	unsigned int cols;
 
-	int **arr;
+	struct rational **arr;
 };
 
-void matrix_init(struct matrix *mat, int rows, int cols, int *input);
+void matrix_init(struct matrix *mat, int rows, int cols, struct rational *input);
 
 // multiply each element in the given row by the scalar.
 // (Basic row operation)

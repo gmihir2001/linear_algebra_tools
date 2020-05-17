@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
+#include "rational.h"
 #include "matrix.h"
 
 int main(void) {
@@ -22,10 +22,12 @@ int main(void) {
 	// for now, just use an array that has 64 spots...
 	// should be able to hold the data.
 
-	int input_arr[64];
+	struct rational input_arr[64];
 
 	for(int i = 0; i < (rows * cols); i++) {
-		scanf("%d", & input_arr[i]);
+		int input;
+		scanf("%d", & input);
+		input_arr[i] = rational_create(input, 1);
 	}
 
 	matrix_init(mat_01_ptr, rows, cols, input_arr);

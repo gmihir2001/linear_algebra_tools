@@ -18,6 +18,14 @@ int main(void) {
 		1, 2, 3, 4
 	};
 
+	struct rational input_rat_arr[12];
+
+	for(int i = 0; i < 3; i++) {
+		for(int j = 0; j < 4; j++) {
+			input_rat_arr[i * 4 + j] = rational_create(input_2d_arr[i * 4 + j], 1);
+		}
+	}
+
 	matrix_init(mat_01_ptr, 3, 4, input_2d_arr);
 
 	matrix_row_add_multiple(mat_01_ptr, 1, 0, 2);
