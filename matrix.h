@@ -11,6 +11,7 @@ struct matrix {
 	struct rational **arr;
 };
 
+void matrix_zero_init(struct matrix *mat, int rows, int cols);
 void matrix_init(struct matrix *mat, int rows, int cols, struct rational *input);
 
 // multiply each element in the given row by the scalar.
@@ -24,5 +25,27 @@ void matrix_print(struct matrix *mat);
 void matrix_row_swap(struct matrix *mat, int row_a, int row_b);
 
 void matrix_row_add_multiple(struct matrix *mat, int row_a, int row_z, int scalar);
+
+// general operations
+
+// multipy by a scalar (fraction)
+// add two matrices together.
+// trace of a matrix.
+struct rational matrix_trace(struct matrix *mat);
+
+// transpose of a matrix
+// store the transpose into T.
+// matrix A is unchnaged.
+void matrix_transpose(struct matrix *T, struct matrix *A);
+
+// sum of two matrices
+// store the sum into matrix C.
+// matrix A and B are unchanged.
+void matrix_add(struct matrix *C, struct matrix *A, struct matrix *B);
+
+// product of two matrices.
+// store the product into matrix C.
+// matrix A and B are unchanged.
+void matrix_mult(struct matrix *C, struct matrix *A, struct matrix *B);
 
 #endif
