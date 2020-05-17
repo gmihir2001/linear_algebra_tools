@@ -48,4 +48,14 @@ void matrix_add(struct matrix *C, struct matrix *A, struct matrix *B);
 // matrix A and B are unchanged.
 void matrix_mult(struct matrix *C, struct matrix *A, struct matrix *B);
 
+// inverse of a 2x2 matrix.
+// store the inverse into matrix inv.
+// matrix A is unchanged.
+void matrix_inv_2x2(struct matrix *inv, struct matrix *A);
+
+// inverse of a 3x3 matrix.
+// store the inverse into matrix inv.
+// matrix A is unchanged.
+void matrix_inv_3x3(struct matrix *inv, struct matrix *A);
+
 #endif
